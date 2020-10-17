@@ -1,0 +1,27 @@
+diff --git a/isp_daemon/source/cm_interface.cpp b/isp_daemon/source/cm_interface.cpp
+index fa81e2c..2edd3a4 100644
+--- a/isp_daemon/source/cm_interface.cpp
++++ b/isp_daemon/source/cm_interface.cpp
+@@ -1163,16 +1163,15 @@ static void isp_recv_event_thread(struct imi_isp_ctrl *gctrl)
+ 			memcpy(&ctrl.reg, (void *)eget.event.data, sizeof(struct ibinder_sensor_reg_info));
+ 			sensor_reg_set(&ctrl);
+ 			break;
++		case IBINDER_SENSOR_GET_CTL:
++		case IBINDER_SENSOR_GET_FMT:
++		case IBINDER_SENSOR_GET_PARAM:
++		case IBINDER_SENSOR_GET_REG:
++			isp_send_event(eget);
++			break;
+ 		default:
+ 			break;
+ 		}
+-
+-		if ((eget.event.header.id == IBINDER_SENSOR_GET_CTL)
+-			|| eget.event.header.id == IBINDER_SENSOR_GET_FMT
+-			|| eget.event.header.id == IBINDER_SENSOR_GET_PARAM
+-			|| eget.event.header.id == IBINDER_SENSOR_GET_REG) {
+-			isp_send_event(eget);
+-		}
+ 	}
+ }
+ 

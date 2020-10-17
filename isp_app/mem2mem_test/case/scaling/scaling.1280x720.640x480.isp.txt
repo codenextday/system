@@ -1,0 +1,28 @@
+{
+    "CaseConfig": {
+        "name": "scaling.1280x720.640x480.isp",
+        "desc": "The image scale down self path testing.",
+
+        "engineConfig": {
+            "pathMode": 4,
+            "mainPathConfig": {
+                "width":  0,
+                "height": 0,
+                "mode":   1,
+                "layout": 2
+            },
+            "selfPathConfig": {
+                "width":  640,
+                "height": 480,
+                "mode":   4,
+                "layout": 2
+            }
+        },
+
+        "frameNum": 1,
+
+        "images": [{
+            "fileName": "test-p5-1280x720-255.pgm"
+        }]
+    }
+}

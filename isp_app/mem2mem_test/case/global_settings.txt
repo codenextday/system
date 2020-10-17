@@ -1,0 +1,7 @@
+{
+    "GlobalSetting": {
+        "som": {
+            "enable": 1
+        }
+    }
+}

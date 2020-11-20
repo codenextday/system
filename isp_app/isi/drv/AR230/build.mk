@@ -9,7 +9,7 @@ LOCAL_C_INCLUDES := $(LOCAL_PATH)/include_priv \
 	                $(LOCAL_PATH)/../../../include/		\
 	                $(LOCAL_PATH)/../../include/
 LOCAL_CFLAGS := -DLINUX -DHAL_ALTERA
-LOCAL_LDLIBS = -lgpio
-LOCAL_SYSTEM_SHARED_LIBRARIES = libgpio.so
+LOCAL_LDLIBS := -lgpio  -lsources
+LOCAL_SYSTEM_SHARED_LIBRARIES := libgpio.so libsources.so
 
 include $(BUILD_SHARED_LIBRARY)

@@ -9,4 +9,6 @@ LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../include_priv \
 	                $(LOCAL_PATH)/../include/ \
 	                $(LOCAL_PATH)/../include_priv/
 LOCAL_CFLAGS := -DLINUX -DHAL_ALTERA
+LOCAL_LDLIBS := -lsom_ctrl
+LOCAL_LDFLAGS := -L$(LOCAL_PATH)/../../prebuildlib
 include $(BUILD_SHARED_LIBRARY)

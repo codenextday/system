@@ -902,7 +902,8 @@ extern int32_t osThreadClose(osThread *pThread);
  *
  *  @return            always OSLAYER_OK
  ******************************************************************************/
-extern int32_t osSleep(uint32_t msec);
+/*extern int32_t osSleep(uint32_t msec);*/
+#define osSleep(ms) usleep((ms) * 1000)
 
 /******************************************************************************
  *   osGetTick()

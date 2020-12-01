@@ -1,0 +1,25 @@
+LOCAL_PATH := $(call my-dir)
+include $(CLEAR_VARS)
+LOCAL_MODULE := unit_test
+LOCAL_SRC_FILES := source/calibdb.cpp   \
+				   source/cm_config.cpp   \
+				   source/cm_debug.cpp   \
+				   source/cm_interface.cpp   \
+				   source/mapcaps.cpp   \
+				   source/xmltags.cpp   \
+
+LOCAL_C_INCLUDES := $(LOCAL_PATH)/include		\
+	$(LOCAL_PATH)/../include/		\
+	$(LOCAL_PATH)/../isi/include/	\
+	$(LOCAL_PATH)/../include/debug/	\
+	$(LOCAL_PATH)/../qt_include/include/QtXml/ \
+	$(LOCAL_PATH)/../qt_include/include/ \
+	$(LOCAL_PATH)/../qt_include/include/QtCore \
+
+
+LOCAL_CFLAGS := -DLINUX -DHAL_ALTERA
+LOCAL_LDLIBS := -lgpio  -lsources -lsom_ctrl -ldl -lembUnit  -lQtCore -lQtXml -lcam_engine -lcamif	-pthread  -lc  -lm
+LOCAL_LDFLAGS := -L$(LOCAL_PATH)/../../prebuildlib
+LOCAL_SYSTEM_SHARED_LIBRARIES := libgpio.so libsources.so
+
+include $(BUILD_EXECUTABLE)

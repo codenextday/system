@@ -1,7 +1,7 @@
 
 #include <stdio.h>
 #include <string.h>
-int parese_args(char *arg);
+int parese_args(const char *arg);
 int main(int argc, const char *argv[])
 {
 	if (argc > 1)

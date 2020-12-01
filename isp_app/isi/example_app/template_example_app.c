@@ -32,7 +32,7 @@ int ParseCommandLine(Parameters* params, int argc,char *argv[] )
     int ret = 1;
     int c;
 
-    memset(params, 0, sizeof(params));
+    memset(params, 0, sizeof(*params));
 
     opterr = 0;
 

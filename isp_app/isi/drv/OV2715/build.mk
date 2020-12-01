@@ -1,6 +1,6 @@
 LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
-LOCAL_MODULE := libov14825.so
+LOCAL_MODULE := libov2715.so
 LOCAL_SRC_FILES := source/OV2715_tables.c \
                    source/OV2715.c
 

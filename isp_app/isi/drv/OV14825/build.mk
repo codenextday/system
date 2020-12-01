@@ -3,7 +3,6 @@ include $(CLEAR_VARS)
 LOCAL_MODULE := libov14825.so
 LOCAL_SRC_FILES := source/OV14825_tables.c \
                    source/OV14825.c
-
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/include_priv \
                     $(LOCAL_PATH)/../../include_priv		\
 	                $(LOCAL_PATH)/../../../include/		\
